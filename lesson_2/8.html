@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script>
+    function power(val, pow) {
+        var sex = val;
+        if (pow > 1) 
+            sex *= power(val, pow-1);     
+        return sex;
+    }
+   
+    
+    while (2){
+    var x = parseFloat(prompt("Введите число"));
+    var y = parseInt(prompt("Введите степень в которую его возвести"));
+    
+        alert(x + ' в ' + y + ' степени равно ' + power(x, y));
+    }
+    
+</script>

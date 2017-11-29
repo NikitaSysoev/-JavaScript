@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<script>
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+        case '+':
+            {
+                return arg1 + arg2;
+            }
+        case '*':
+            {
+                return arg1 * arg2;
+            }
+        case '-':
+            {
+                return arg1 - arg2;
+            }
+        case '/':
+            {
+                return arg1 / arg2;
+            }
+        }
+    }
+    
+    while(2){
+      var x = parseFloat(prompt("Введите arg1"));
+    var y = parseFloat(prompt("Введите arg2"));
+    var z = prompt("Введите операцию (*, +, -, /)");
+    alert('Результат равен ' + mathOperation(x, y, z));  
+    }
+    
+    
+</script>
