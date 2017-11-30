@@ -1,31 +1,50 @@
 <meta charset="utf-8">
 <script>
+    
+    
+  function sum(x, y) {
+        return (x + y);
+    }
+    function residual(x, y) {
+        return (x - y);
+    }
+    function multiplication(x, y) {
+        return (x * y);
+    }
+    function degree(x, y) {
+        return (x / y);
+    }  
+    
+    
     function mathOperation(arg1, arg2, operation) {
+         
         switch (operation) {
         case '+':
             {
-                return arg1 + arg2;
+                return sum(arg1, arg2) ;
+                
             }
         case '*':
             {
-                return arg1 * arg2;
+                return multiplication(arg1, arg2);
             }
         case '-':
             {
-                return arg1 - arg2;
+                return residual(arg1, arg2);
             }
         case '/':
             {
-                return arg1 / arg2;
+                return degree(arg1, arg2);
             }
+                
         }
     }
     
     while(2){
-      var x = parseFloat(prompt("Введите arg1"));
-    var y = parseFloat(prompt("Введите arg2"));
-    var z = prompt("Введите операцию (*, +, -, /)");
-    alert('Результат равен ' + mathOperation(x, y, z));  
+      var a = parseFloat(prompt("Введите первое число"));
+    var b = parseFloat(prompt("Введите второе число"));
+    var c = prompt("Введите операцию (*, +, -, /)");
+    alert('Результат равен ' + mathOperation(a, b, c));  
     }
     
     
