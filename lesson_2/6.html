@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+<script>
+    
+    
+  function sum(x, y) {
+        return (x + y);
+    }
+    function residual(x, y) {
+        return (x - y);
+    }
+    function multiplication(x, y) {
+        return (x * y);
+    }
+    function degree(x, y) {
+        return (x / y);
+    }  
+    
+    
+    function mathOperation(arg1, arg2, operation) {
+         
+        switch (operation) {
+        case '+':
+            {
+                return sum(arg1, arg2) ;
+                
+            }
+        case '*':
+            {
+                return multiplication(arg1, arg2);
+            }
+        case '-':
+            {
+                return residual(arg1, arg2);
+            }
+        case '/':
+            {
+                return degree(arg1, arg2);
+            }
+                
+        }
+    }
+    
+    while(2){
+      var a = parseFloat(prompt("Введите первое число"));
+    var b = parseFloat(prompt("Введите второе число"));
+    var c = prompt("Введите операцию (*, +, -, /)");
+    alert('Результат равен ' + mathOperation(a, b, c));  
+    }
+    
+    
+</script>
