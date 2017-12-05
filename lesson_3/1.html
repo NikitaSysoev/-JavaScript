@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<script>
+
+    function isSimple(num) {
+        if (num < 2) {
+            return false;
+        }
+        for (var i = 2; i < num; i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    var a = parseInt(prompt('Введите c какого числа начать проверку на простые числа', '0'));
+    var n = parseInt(prompt('Введите по какое число проверить на простые числа', '100'));
+
+    while (a < n) {
+        a++;
+        if (isSimple(a)) {
+            alert(a);
+        }
+    }
+
+</script>
