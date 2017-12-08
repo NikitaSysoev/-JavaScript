@@ -1,0 +1,39 @@
+﻿<meta charset="utf-8">
+<script>
+    var digits = {
+        units: 0,
+        decades: 0,
+        hundreds: 0,
+        split: function (x) {
+            if (x < 1 || x > 999) {
+                alert('Вы ввели недопустимые числа');
+                return digits;
+            }
+            else {
+                this.units = showUnits(x);
+                this.decades = showDecades(x);
+                this.hundreds = showHundreds (x);
+            }
+
+            alert("'Единицы:' " + this.units);
+            alert("'Десятки:' " + this.decades);
+            alert("'Сотни:' " + this.hundreds);
+        }
+    };
+
+    function showUnits (x) {
+        return x % 10;
+    }
+
+    function showDecades (x) {
+        return Math.floor(x / 10)%10;
+    }
+
+
+    function showHundreds (x) {
+        return Math.floor(x / 100)%10;
+    }
+
+    var n = parseFloat(prompt('Введите число от 0 до 999'));
+    digits.split(n);
+</script>
